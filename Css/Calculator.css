@@ -47,7 +47,7 @@ body {
 
 header {
     background-color: var(--10-color);
-    position: fixed;
+    position: relative;
     width: 100%;
     z-index: 5;
 }
@@ -88,21 +88,35 @@ nav ul li:hover {
 }
 
 section {
-    padding: 5% 10% 0% 10%;
+    padding: 0.5% 10% 0% 10%;
     position: relative;
     width: 100%;
     height: 100vh;
 }
-
 .input {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     background-color: var(--font-color-white);
     border-radius: 20px;
-    padding: 50px 150px 50px 150px;
+    padding: 5% 10% 5% 10%;
     display: flex;
     flex-direction: column;
 }
+.input button{
+    font-family: var(--Heading-Font);
+    background-color: #b8b8b8;
+    border-radius: 10px;
+    width: 50%;
+    height: 100px;
+    margin-top: 1%;
+    transition: background-color .5s;
+}
+.input button:hover{
+    background-color: #969494;
+
+}
+
+
 
 .inputRadio{
     display: flex;
@@ -119,13 +133,23 @@ input {
     border-bottom-style: groove;
 }
 
-textarea:focus,
-input:focus {
+textarea:focus,input:focus {
     outline: none;
 }
 
 .input p {
     font-size: 20px;
+}
+
+.result{
+    display: flex;
+}
+.Item{
+    margin: 2.5% 1% 2.5% 1%;
+    padding: 5% 5% 5% 5%;
+    width: 30%;
+    background-color: var(--font-color-white);
+    border-radius: 20px;
 }
 
 
@@ -187,5 +211,33 @@ footer {
 
     .Contact-Footer .Box {
         padding: 1rem 5rem;
+    }
+}
+@media screen and (max-width:550px){
+    footer{
+        height: auto;
+    }
+    .Contact-Footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .Contact-Footer .Box {
+        padding: 0.1rem 1rem;
+    }
+    .result{
+        flex-direction: column;
+    }
+    .Item{
+        margin: 2.5% 1% 2.5% 1%;
+        padding: 2.5% 2.5% 2.5% 2.5%;
+        width:  auto;    
+    }
+    
+    
+}
+
+@media screen and (min-height:800px){
+    .SectionOne{
+        height: 100vh;
     }
 }
