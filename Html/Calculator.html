@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Css/Calculator.css">
-    <title>Document</title>
+    <title>Calculator</title>
 </head>
 
 <body>
@@ -37,51 +37,79 @@
         </center>
         <div class="input">
             <div class="inputRadio">
-                <input type="radio" name="gender" value="male">
+                <input type="radio" name="gender" value="male" id="Male">
                 <label for="male">ผู้ชาย</label><br>
-                <input type="radio" id="css" name="gender" value="female">
+                <input type="radio" id="css" name="gender" value="female" id="Female">
                 <label for="female">ผู้หญิง</label><br>
 
             </div>
             <p>อายุ (ปี)</p>
-            <input>
+            <input id="Age">
             <p>ส่วนสูง (cm)</p>
-            <input>
+            <input id="Height">
             <p>น้ำหนัก (kg)</p>
-            <input>
+            <input id="Weight">
+            
             <p>รอบเอว (inch)</p>
-            <input>
-            <center>
-                <button><h1>คำนวณ</h1></button>
+            <input id="Waist">
 
+            <p>รอบข้อมือ (inch)</p>
+            <input id="Wrist">
+
+            <p>รอบสะโพก (inch)</p>
+            <input id="Hip">
+
+            <p>รอบต้นแขน (inch)</p>
+            <input id="Upper-Arm">
+
+            <div class="Amount-Of-Exercise">
+                <label for="TDEE">ระดับการออกกำลังกาย</label>
+                <select name="TDEE" id="TDEE_ID">
+                    <option value="One">ออกกำลังกายน้อยมากหรือไม่ออกเลย</option>
+                    <option value="Two">ออกกำลังกาย 1-3 ครั้งต่อสัปดาห์</option>
+                    <option value="Three">ออกกำลังกาย 4-5 ครั้งต่อสัปดาห์</option>
+                    <option value="Four">ออกกำลังกาย 6-7 ครั้งต่อสัปดาห์</option>
+                    <option value="Five">ออกกำลังกายวันละ 2 ครั้งขึ้นไป</option>
+
+                </select>
+
+            </div>
+            <center>
+                <button onclick="Calculator()">
+                    <h1>คำนวณ</h1>
+                </button>
             </center>
         </div>
         <div class="result">
             <div class="Item">
                 <center>
                     <p>Bmi</p>
-                    <h1>0000</h1>
+                    <h1 id="BMI">0000</h1>
                 </center>
             </div>
             <div class="Item">
                 <center>
                     <p>Bmr</p>
-                    <h1>0000</h1>
+                    <h1 id="BMR">0000</h1>
                 </center>
             </div>
             <div class="Item">
                 <center>
                     <p>Tdee</p>
-                    <h1>0000</h1>
+                    <h1 id="TDEE">0000</h1>
                 </center>
             </div>
             <div class="Item">
                 <center>
                     <p>body fat</p>
-                    <h1>00000</h1>
+                    <h1 id="BODY-FAT">0000</h1>
                 </center>
             </div>
         </div>
+        <center>
+            <h1 style="margin-bottom: 2%; color: rgb(250, 61, 61);">"การคำนวณนี้เป็นเพียงแค่การคำนวณแบบคร่าวๆ เท่านั้น"
+            </h1>
+        </center>
     </section>
     <footer>
         <div class="Contact-Footer">
