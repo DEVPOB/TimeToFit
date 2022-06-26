@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap');
+:root{
+    --60-color:#EEEEEE;
+    --30-color:#00ADB5;
+    --10-color:#181818;
+    --font-color-white:#e4e3e3;
+    --font-color-black:#222831;
+    --Heading-Font:'Kanit', sans-serif;
+}
+* a{
+    text-decoration: none;
+    color: var(--font-color-white);
+}
+* li{
+    list-style: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+::-webkit-scrollbar{
+    width: .7rem;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+    background-color: #00000030;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #00000060;
+}
+body{
+    font-family:var(--Heading-Font);
+    background-color: var(--60-color);
+}
+header {
+    background-color: var(--10-color);
+    position: relative;
+    width: 100%;
+    z-index: 5;
+}
+
+.conatainer {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo a {
+    font-size: 3rem;
+    letter-spacing: 10px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+    font-size: 1.5rem;
+}
+
+nav ul li:hover {
+    text-decoration: underline;
+}
+
+.bar {
+    display: none;
+}
+
+section{
+    padding: 0.5% 5% 2% 5%;
+
+}
+#Image{
+    border-radius: 5px;
+    width: 50%;
+    height: 50%;
+    margin-bottom: 1%;
+}
+#Title{
+    text-align: center;
+    margin: 1% 0% 1% 0%;
+}
+.list li{
+    padding-left: 2%;
+    padding-bottom: 0.5%;
+}
+#Description{
+    padding-bottom: 0.5%;
+}
+
+footer {
+    background-color: var(--10-color);
+    color: var(--font-color-white);
+    height: 30vh;
+}
+
+.Contact-Footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+}
+
+.Contact-Footer .Box {
+    padding: 1rem 10rem;
+}
+
+@media screen and (max-width:970px) {
+    .bar {
+        display: block;
+    }
+
+    nav {
+        width: 90%;
+        background-color: #313131;
+        margin-top: 370px;
+        position: fixed;
+        border-radius: 10px;
+        overflow: hidden;
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        padding: 20px 25px;
+    }
+
+    nav ul li:hover {
+        background-color: #1b1b1b;
+    }
+
+    .show {
+        display: flex;
+    }
+
+    .Contact-Footer .Box {
+        padding: 1rem 5rem;
+    }
+}
+@media screen and (max-width:550px){
+    footer{
+        height: auto;
+    }
+    .Contact-Footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .Contact-Footer .Box {
+        padding: 0.1rem 1rem;
+    }
+}
