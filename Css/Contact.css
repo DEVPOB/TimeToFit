@@ -155,8 +155,14 @@ footer {
     }
 }
 @media screen and (max-width:400px){
-    .Fit-Firm{
+    footer{
+        height: 30vh;
+    }
+    section a{
         word-wrap: break-word;
+    }
+    section{
+        height: auto;
     }
     
 }
