@@ -94,7 +94,8 @@ section {
     height: auto;
 }
 .input{
-    max-width: 100%;
+    margin: auto;
+    max-width: 70%;
     height: auto;
     background-color: var(--font-color-white);
     border-radius: 20px;
@@ -104,36 +105,50 @@ section {
 }
 
 
-
-.input button{
-    font-family: var(--Heading-Font);
-    background-color: #b8b8b8;
-    border-radius: 10px;
+button{
     width: 50%;
     height: 100px;
-    margin-top: 5%;
-    transition: background-color .5s;
+    border-radius: 10px;
     border: none;
+    transition: background-color .5s;
+    font-family: var(--Heading-Font);
+    cursor: pointer;
 }
-.input button:hover{
+
+.btn{
+    margin-top: 5%;
+    background-color: #b8b8b8;
+}
+.btn:hover{
     background-color: #969494;
 
 }
 
 
-.inputRadio{
+.gender{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    
+}
+.activeMale, .GenderMale:hover{
+    background-color: #52e1e9;
+}
+.activeFeMale, .GenderFeMale:hover{
+    background-color: #f758f7;
 }
 
 
 
 
+
+
 input {
-    height: 25px;
+    height: 25%;
     background-color: var(--font-color-white);
     border-style: hidden;
     border-bottom-style: groove;
+    font-size: 25px;
 }
 
 textarea:focus,input:focus {
@@ -163,6 +178,7 @@ select:focus{
 
 .result{
     display: flex;
+    justify-content: center;
 }
 .Item{
     margin: 2.5% 1% 2.5% 1%;
@@ -170,6 +186,7 @@ select:focus{
     width: 30%;
     background-color: var(--font-color-white);
     border-radius: 20px;
+    text-align: center;
 }
 
 
@@ -240,6 +257,9 @@ footer {
     .Contact-Footer{
         display: flex;
         flex-direction: column;
+    }
+    button{
+        width: 100%;
     }
     .Contact-Footer .Box {
         padding: 0.1rem 1rem;

@@ -32,36 +32,29 @@
             </div>
         </div>
     </header>
-    <section>
-        <center>
-            <h1>คำนวณ</h1>
-        </center>
+    <section id="Calculate">
+            <h1 style="text-align: center;">คำนวณ</h1>
         <div class="input">
-            <div class="inputRadio">
-                <input type="radio" name="gender" value="male" id="Male">
-                <label for="male">ผู้ชาย</label><br>
-                <input type="radio" id="css" name="gender" value="female" id="Female">
-                <label for="female">ผู้หญิง</label><br>
+            <div class="gender">
+
+                <button style="margin-right: 2%;" class="GenderMale"><h1>ผู้ชาย</h1></button>
+                <button style="margin-left: 2%;" class="GenderFeMale"><h1>ผู้หญิง</h1></button>
 
             </div>
+
             <p>อายุ (ปี)</p>
-            <input id="Age">
+            <input id="Age" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
             <p>ส่วนสูง (cm)</p>
-            <input id="Height">
+            <input id="Height" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
             <p>น้ำหนัก (kg)</p>
-            <input id="Weight">
-            
+            <input id="Weight" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
             <p>รอบเอว (inch)</p>
-            <input id="Waist">
-
-            <p>รอบข้อมือ (inch)</p>
-            <input id="Wrist">
-
+            <input id="Waist" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
             <p>รอบสะโพก (inch)</p>
-            <input id="Hip">
+            <input id="Hip" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
 
-            <p>รอบต้นแขน (inch)</p>
-            <input id="Upper-Arm">
+            <p>รอบคอ (inch)</p>
+            <input id="Neck" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
 
             <div class="Amount-Of-Exercise">
                 <label for="TDEE">ระดับการออกกำลังกาย</label>
@@ -76,41 +69,57 @@
 
             </div>
             <center>
-                <button onclick="Calculator()">
+                <button onclick="Calculator()" class="btn">
                     <h1>คำนวณ</h1>
                 </button>
             </center>
         </div>
-        <div class="result">
+        <div class="result" id="result1">
             <div class="Item">
-                <center>
                     <p>Bmi</p>
                     <h1 id="BMI">0000</h1>
-                </center>
             </div>
             <div class="Item">
-                <center>
                     <p>Bmr</p>
                     <h1 id="BMR">0000</h1>
-                </center>
             </div>
             <div class="Item">
-                <center>
                     <p>Tdee</p>
                     <h1 id="TDEE">0000</h1>
-                </center>
             </div>
             <div class="Item">
-                <center>
                     <p>body fat</p>
                     <h1 id="BODY-FAT">0000</h1>
-                </center>
             </div>
         </div>
-        <center>
-            <h1 style="margin-bottom: 2%; color: rgb(250, 61, 61);">"การคำนวณนี้เป็นเพียงแค่การคำนวณแบบคร่าวๆ เท่านั้น"
-            </h1>
-        </center>
+
+    </section>
+    <section id="DietSection">
+            <h1 style="text-align: center;">Diet Planing</h1>
+            <div class="input">
+            <p>เป้าหมายน้ำหนักที่ต้องการ(kg)</p>
+            <input id="Weight_Goal" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+            <p>จำนวนวัน</p>
+            <input id="Day_Goal" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+
+
+            <center>
+                <button onclick="DietPlanCal()" class="btn">
+                    <h1>คำนวณ</h1>
+                </button>
+            </center>
+        </div>
+
+        <div class="result">
+            <div class="Item">
+                <p>ปริมาณพลังงานที่ต้องลดต่อวัน (kcal)</p>
+                <h1 id="Caloric-Reduction">0000</h1>
+            </div>
+            <div class="Item">
+                <p>ปริมาณพลังงานที่แนะนำต่อวัน (kcal)</p>
+                <h1 id="Caloric-Recommend">0000</h1>
+            </div>
+        </div>
     </section>
     <footer>
         <div class="Contact-Footer">
